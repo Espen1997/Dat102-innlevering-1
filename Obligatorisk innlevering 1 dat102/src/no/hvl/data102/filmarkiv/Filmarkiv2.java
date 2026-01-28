@@ -18,6 +18,7 @@ public class Filmarkiv2 implements FilmarkivADT {
         antall = 0;
         start = null;
     }
+
     @Override
     public void leggTilFilm(Film film) {
         LinearNode<Film> ny = new LinearNode<>(film);
@@ -25,6 +26,7 @@ public class Filmarkiv2 implements FilmarkivADT {
         start = ny;
         antall++;
     }
+
     @Override
     public Film finnFilm(int filmnr) {
         LinearNode<Film> current = start;
@@ -37,6 +39,7 @@ public class Filmarkiv2 implements FilmarkivADT {
         }
         return null;
     }
+
     @Override
     public boolean slettFilm(int filmnr) {
         LinearNode<Film> current = start;
@@ -58,6 +61,7 @@ public class Filmarkiv2 implements FilmarkivADT {
         }
         return false;
     }
+
     @Override
     public Film[] soekTittel(String delstreng) {
         Film[] treff = new Film[antall];
@@ -74,6 +78,7 @@ public class Filmarkiv2 implements FilmarkivADT {
 
         return java.util.Arrays.copyOf(treff, count);
     }
+
     @Override
     public Film[] soekProdusent(String produsent) {
         Film[] treff = new Film[antall];
@@ -90,8 +95,10 @@ public class Filmarkiv2 implements FilmarkivADT {
 
         return java.util.Arrays.copyOf(treff, count);
     }
+
     @Override
     public int antall() {
         return antall;
     }
+}
 

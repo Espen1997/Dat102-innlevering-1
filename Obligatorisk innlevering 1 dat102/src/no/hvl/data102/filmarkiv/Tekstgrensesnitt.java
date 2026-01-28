@@ -28,7 +28,7 @@ public class Tekstgrensesnitt {
         int valg = Integer.parseInt(scanner.nextLine());
         Sjanger sjanger = Sjanger.values()[valg];
 
-        return new Film(int filmNr, String tittel, String produsent, int lanseringsaar, String sjanger);
+        return new Film(filmNr, tittel, produsent, lanseringsaar, sjanger);
     }
 
     // Skriver ut en film med alle opplysninger

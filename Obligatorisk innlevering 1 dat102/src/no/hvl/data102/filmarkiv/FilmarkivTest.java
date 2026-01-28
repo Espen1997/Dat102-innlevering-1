@@ -16,7 +16,7 @@ public class FilmarkivTest {
         arkiv = new Filmarkiv(2);
 
         film1 = new Film(1, "Inception", "Nolan", 2010, Sjanger.ACTION);
-        film2 = new Film(2, "Interstellar", "Nolan", 2014, Sjanger.SCIFI);
+        film2 = new Film(2, "Interstellar", "Nolan", 2014, Sjanger.SCI_FI);
         film3 = new Film(3, "Titanic", "Cameron", 1997, Sjanger.DRAMA);
     }
 
