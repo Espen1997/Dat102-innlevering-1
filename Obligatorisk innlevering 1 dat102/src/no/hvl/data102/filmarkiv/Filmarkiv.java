@@ -1,5 +1,7 @@
 package no.hvl.data102.filmarkiv;
 
+
+
 public class Filmarkiv implements FilmarkivADT {
 
     private Film[] filmer;

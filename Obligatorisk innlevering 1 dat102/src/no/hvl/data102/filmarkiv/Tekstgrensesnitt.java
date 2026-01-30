@@ -41,14 +41,14 @@ public class Tekstgrensesnitt {
         System.out.println("Filmnummer: " + film.getFilmNr());
         System.out.println("Tittel: " + film.getTittel());
         System.out.println("Produsent: " + film.getProdusent());
-        System.out.println("År: " + film.getlanseringsaar());
+        System.out.println("År: " + film.getLanseringsaar());
         System.out.println("Sjanger: " + film.getSjanger());
         System.out.println("-------------------------");
     }
 
     // Skriver ut alle filmer med delstreng i tittelen
     public void skrivUtFilmDelstrengITittel(FilmarkivADT arkiv, String delstreng) {
-        Film[] filmer = arkiv.sokTittel(delstreng);
+        Film[] filmer = arkiv.soekTittel(delstreng);
         for (Film film : filmer) {
             skrivUtFilm(film);
         }
@@ -56,7 +56,7 @@ public class Tekstgrensesnitt {
 
     // Skriver ut alle filmer av en produsent (delstreng)
     public void skrivUtFilmProdusent(FilmarkivADT arkiv, String delstreng) {
-        Film[] filmer = arkiv.sokProdusent(delstreng);
+        Film[] filmer = arkiv.soekProdusent(delstreng);
         for (Film film : filmer) {
             skrivUtFilm(film);
         }

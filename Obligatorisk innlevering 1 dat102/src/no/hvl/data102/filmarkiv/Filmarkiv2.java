@@ -97,6 +97,11 @@ public class Filmarkiv2 implements FilmarkivADT {
     }
 
     @Override
+    public int antall(Sjanger sjanger) {
+        return 0;
+    }
+
+    @Override
     public int antall() {
         return antall;
     }
