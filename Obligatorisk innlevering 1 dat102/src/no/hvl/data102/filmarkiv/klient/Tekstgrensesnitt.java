@@ -1,4 +1,8 @@
-package no.hvl.data102.filmarkiv;
+package no.hvl.data102.filmarkiv.klient;
+
+import no.hvl.data102.filmarkiv.adt.FilmarkivADT;
+import no.hvl.data102.filmarkiv.impl.Film;
+import no.hvl.data102.filmarkiv.impl.Sjanger;
 
 import java.util.Scanner;
 
@@ -17,7 +21,7 @@ public class Tekstgrensesnitt {
         System.out.print("Produsent: ");
         String produsent = scanner.nextLine();
 
-        System.out.print("Utgivelsesår: ");
+        System.out.print("Lanseringsaar: ");
         int lanseringsaar = Integer.parseInt(scanner.nextLine());
 
         System.out.println("Sjanger:");
@@ -38,10 +42,10 @@ public class Tekstgrensesnitt {
             return;
         }
 
-        System.out.println("Filmnummer: " + film.getFilmNr());
+        System.out.println("Filmnummer: " + film.getFilmnr());
         System.out.println("Tittel: " + film.getTittel());
         System.out.println("Produsent: " + film.getProdusent());
-        System.out.println("År: " + film.getLanseringsaar());
+        System.out.println("Lanseringsaar: " + film.getLanseringsaar());
         System.out.println("Sjanger: " + film.getSjanger());
         System.out.println("-------------------------");
     }
@@ -67,9 +71,7 @@ public class Tekstgrensesnitt {
         System.out.println("Antall filmer totalt: " + arkiv.antall());
 
         for (Sjanger s : Sjanger.values()) {
-            System.out.println(
-                    s + ": " + arkiv.antallSjanger(s)
-            );
+            System.out.println(s + ": " + arkiv.antall(s));
         }
     }
 }

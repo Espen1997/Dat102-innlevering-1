@@ -1,4 +1,4 @@
-package no.hvl.data102.filmarkiv;
+package no.hvl.data102.filmarkiv.impl;
 
 import java.util.Objects;
 
@@ -12,7 +12,7 @@ public class Film {
 
     //konstruktør med alle data
 
-    public Film(int filmnr, String produsent, String tittel, int lanseringsaar, Sjanger sjanger, String filmselskap) {
+    public Film(int filmnr, String produsent, String tittel, int lanseringsaar, Sjanger sjanger) {
         this.filmnr =filmnr;
         this.produsent =produsent;
         this.tittel =tittel;
@@ -68,7 +68,6 @@ public class Film {
     public void setFilmselskap(String filmselskap) {
         this.filmselskap = filmselskap;
     }
-
     @Override
     public boolean equals(Object o){
         if(this == o)

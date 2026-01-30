@@ -1,6 +1,6 @@
-package no.hvl.data102.filmarkiv;
+package no.hvl.data102.filmarkiv.impl;
 
-
+import no.hvl.data102.filmarkiv.adt.FilmarkivADT;
 
 public class Filmarkiv implements FilmarkivADT {
 
@@ -15,9 +15,9 @@ public class Filmarkiv implements FilmarkivADT {
 
     // Legger til en film
     @Override
-    public boolean leggTilFilm(Film film) {
+    public void leggTilFilm(Film film) {
         if (film == null) {
-            return false;
+            return;
         }
 
         if (antall == filmer.length) {
@@ -26,7 +26,6 @@ public class Filmarkiv implements FilmarkivADT {
 
         filmer[antall] = film;
         antall++;
-        return true;
     }
 
     // Finner film basert på filmnummer
@@ -61,7 +60,7 @@ public class Filmarkiv implements FilmarkivADT {
 
     // Søker etter filmer med tittel
     @Override
-    public Film[] sokTittel(String delstreng) {
+    public Film[] soekTittel(String delstreng) {
         Film[] temp = new Film[antall];
         int treff = 0;
 
@@ -77,7 +76,7 @@ public class Filmarkiv implements FilmarkivADT {
 
     // Søker etter filmer med produsent
     @Override
-    public Film[] sokProdusent(String delstreng) {
+    public Film[] soekProdusent(String delstreng) {
         Film[] temp = new Film[antall];
         int treff = 0;
 
@@ -89,6 +88,11 @@ public class Filmarkiv implements FilmarkivADT {
         }
 
         return trimTabell(temp, treff);
+    }
+
+    @Override
+    public int antall(Sjanger sjanger) {
+        return 0;
     }
 
     // Returnerer antall filmer

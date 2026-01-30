@@ -1,4 +1,8 @@
-package no.hvl.data102.filmarkiv;
+package no.hvl.data102.filmarkiv.klient;
+
+import no.hvl.data102.filmarkiv.adt.FilmarkivADT;
+import no.hvl.data102.filmarkiv.impl.Film;
+import no.hvl.data102.filmarkiv.impl.Sjanger;
 
 public class Meny {
     private Tekstgrensesnitt tekstgr;
@@ -14,8 +18,7 @@ public class Meny {
                 "Inception",
                 "Christopher Nolan",
                 2010,
-                Sjanger.SCIFI,
-                "Warner Bros"
+                Sjanger.SCI_FI
         ));
 
         filmarkiv.leggTilFilm(new Film(
@@ -23,8 +26,7 @@ public class Meny {
                 "The Godfather",
                 "Francis Ford Coppola",
                 1972,
-                Sjanger.DRAMA,
-                "Paramount Pictures"
+                Sjanger.DRAMA
         ));
 
         filmarkiv.leggTilFilm(new Film(
@@ -32,8 +34,7 @@ public class Meny {
                 "Parasite",
                 "Bong Joon-ho",
                 2019,
-                Sjanger.THILLER,
-                "CJ Entertainment"
+                Sjanger.THRILLER
         ));
     }
 }

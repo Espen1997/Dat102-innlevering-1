@@ -1,20 +1,13 @@
-package no.hvl.data102.filmarkiv;
+package no.hvl.data102.filmarkiv.impl;
 
-public class LinearNode<T> {
-        public T data;
-        public LinearNode<T> neste;
+import no.hvl.data102.filmarkiv.adt.FilmarkivADT;
 
-        public LinearNode(T data) {
-            this.data = data;
-            this.neste = null;
-        }
-    }
 public class Filmarkiv2 implements FilmarkivADT {
 
     private int antall;
     private LinearNode<Film> start;
 
-    public Filmarkiv2() {
+    public Filmarkiv2(int i) {
         antall = 0;
         start = null;
     }
@@ -106,4 +99,5 @@ public class Filmarkiv2 implements FilmarkivADT {
         return antall;
     }
 }
+
 
